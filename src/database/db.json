@@ -1,12 +1,6 @@
 [
-  {
-    "id": 1,
-    "name": "Product-01",
-    "price": 100
-  },
-  {
-    "id": 2,
-    "name": "Product-02",
-    "price": 200
-  }
+  { "id": 1, "name": "Product-01", "price": 100 },
+  { "id": 2, "name": "Product-02", "price": 200 },
+  { "id": "2026-11-14T18:03:16.676Z", "name": "Product-03" },
+  { "id": 1794679449140, "name": "Product-04" }
 ]
