@@ -15,6 +15,8 @@ const productController = async (req: IncomingMessage, res: ServerResponse) => {
 
   const body = await bodyParse(req);
 
+  const index = products.findIndex((p: IProduct)=> p.id === id)
+
   if (url === "/products" && method === "GET") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(
@@ -45,7 +47,16 @@ const productController = async (req: IncomingMessage, res: ServerResponse) => {
     res.end(
       JSON.stringify({
         message: "Product Created Successfully...",
-        data: products
+        data: products,
+      }),
+    );
+  } else if (method === "PUT" && id !== null) {
+    console.log(index);
+    res.writeHead(201, { "Content-Type": "application/json" });
+    res.end(
+      JSON.stringify({
+        message: "Product updated Successfully...",
+        // data: products,
       }),
     );
   }
